@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ClientFormController">
+<children>
+    <Label fx:id="lblClientName" text="UserName" textFill="#008d15">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+    <ScrollPane fx:id="scpane" layoutY="235.0" prefHeight="191.0" prefWidth="600.0">
+        <content>
+            <VBox fx:id="vBox" prefHeight="331.0" prefWidth="597.0" />
+        </content>
+    </ScrollPane>
+    <HBox layoutX="53.0" layoutY="452.0" prefHeight="41.0" prefWidth="494.0">
+        <children>
+            <TextField fx:id="txtTextMessage" prefHeight="41.0" prefWidth="332.0" promptText="write your msg" />
+            <Button layoutX="249.0" layoutY="10.0" mnemonicParsing="false" onAction="#imageSendOnAction" prefHeight="41.0" prefWidth="91.0" style="-fx-background-color: yellow;" text="Images" />
+            <Button fx:id="btnFile" mnemonicParsing="false" onAction="#btnFileOnAction" prefHeight="41.0" prefWidth="84.0" style="-fx-background-color: gray;" text="Files" />
+            <Button layoutX="313.0" layoutY="10.0" mnemonicParsing="false" onAction="#txtSendOnAction" prefHeight="41.0" prefWidth="90.0" style="-fx-background-color: green;" text="send">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+        </children>
+    </HBox>
+      <TextArea fx:id="txtArea" layoutY="36.0" prefHeight="199.0" prefWidth="600.0" promptText="Text Area" />
+</children>
+</AnchorPane>
